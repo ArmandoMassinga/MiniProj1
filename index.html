@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Principal PWA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        #menu {
+            background-color: rgb(37, 37, 39);
+            padding: 10px 0;
+        }
+        
+        #menu ul {
+            max-width: 800px;
+            margin: auto;
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        
+        #menu ul li {
+            margin-right: 20px;
+        }
+        
+        #menu ul li a {
+            color: #FFF;
+            padding: 10px 20px;
+            display: inline-block;
+            text-decoration: none;
+            transition: background .4s;
+        }
+        
+        #menu ul li a:hover,
+        #menu ul li:first-child a {
+            background-color: rgb(24, 139, 233);
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            flex-grow: 1;
+        }
+
+        .highlight-text {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #333;
+            text-align: justify;
+            padding: 10px;
+        }
+
+        footer {
+            padding: 20px 0;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .footer-icons ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-icons li {
+            margin: 0 15px;
+        }
+
+        .footer-icons img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s;
+        }
+
+        .footer-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        footer p {
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #dcdcdc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="menu">
+        <ul>
+            <li><a href="#" onclick="showSection('quem-sou')">Quem Sou Eu?</a></li>
+            <li><a href="#" onclick="showSection('o-que-faco')">O Que Faço?</a></li>
+            <li><a href="#" onclick="showSection('hobbies')">Hobbies</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <section id="quem-sou" class="highlight-text" style="display: none;">
+            <h2>Quem Sou Eu?</h2>
+            <p>Meu nome é Armando Leonardo da Conceição Massinga, nascido em Moçambique, na província de Inhambane. Sou profissional na área de TI com sólida experiência em Administração de Sistemas Aplicacionais e Base de Dados, e já actuei em projectos relevantes que me proporcionaram um vasto conhecimento técnico.</p>
+        </section>
+
+        <section id="o-que-faco" class="highlight-text" style="display: none;">
+            <h2>O Que Faço</h2>
+            <p>Atualmente, trabalho como Administrador de Base de Dados e Aplicações, onde actuo com servidores e tecnologias como WebLogic, JBoss, WildFly, SpringBoot e Tomcat. Minha experiência inclui também o Administração de bases de dados como Oracle, MySQL, SQL Server, MongoDB, ClickHouse e PostgreSQL. Além disso, participei como consultor de TI na Redecami, no projeto School in Box, e fui Analyst Inventory nas Cervejas de Moçambique. Meu foco está em implementar e manter soluções eficientes que assegurem o desempenho e a confiabilidade dos sistemas.</p>
+        </section>
+
+        <section id="hobbies" class="highlight-text" style="display: none;">
+            <h2>Hobbies</h2>
+            <p>Fora do ambiente profissional, gosto de atividades que me permitem relaxar e expandir meus conhecimentos. Tenho interesse em tecnologia e inovação, então frequentemente dedico meu tempo a aprender sobre novas ferramentas e tendências na área de TI. Além disso, gosto de leitura e me interesso por temas como desenvolvimento pessoal e ciência. Sempre que possível, também aproveito para praticar atividades ao ar livre, o que me ajuda a manter o equilíbrio entre o trabalho e o lazer.</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-icons">
+            <ul>
+                <li><a href="https://www.facebook.com/profile.php?id=100078999482296"><img src="images/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://plus.google.com"><img src="images/google+.png" alt="Google+"></a></li>
+                <li><a href="https://twitter.com/seu_perfil_twitter"><img src="images/twitter.png" alt="Twitter"></a></li>
+                <li><a href="https://www.linkedin.com/in/armando-massinga-70a290191/"><img src="images/Linkedin.png" alt="LinkedIn"></a></li>
+            </ul>
+        </div>
+        <p>&copy; 2024 Armando Massinga</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.highlight-text').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+
+</body>
+
+</html>
